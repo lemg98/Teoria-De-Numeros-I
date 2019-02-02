@@ -55,6 +55,38 @@
     \footnotesize{\textbf{Link al código fuente:} git@github.com:lemg98/Teoria-De-Numeros-I.git}
 \end{titlepage}
 
-        
+    \begin{enumerate}
+
+        \item \begin{enumerate}
+
+            \item Determinar los valores de $n$ para los cuales $8n^3 + 12n^2 - 2n - 3$ es múltiplo de 5.\\
+            \textbf{Solución: } Observamos los resultados de los números de $n\in [1,10]$ y en el siguiente renglón $n\in[1,10]$. \\
+            (1,15) (2,105) (3,315) (4,693) (5,1287) (6,2145) (7,3315) (8,4845) (9,6783) (10,9177) \\ 
+            (11,12075) (12,15525) (13,19575) (14,24273) (15,29667) (16,35805) (17,42735) (18,50505) (19,59163) (20,68757) \\ 
+            Basta con que el resultado tenga 5 o 0 en sus unidades para que sea múltiplo de 5. Podemos notar que si las unidades de $n$ son $1,2,3,6,7,8$ entonces el resultado es múltiplo de 5. Daremos esta proposición.
+            
+            \item Demostrar su afirmación por inducción.\\
+            \textbf{Solución: } Observamos
+            \begin{equation*}
+                \begin{split}
+                    (2n - 1)(2n + 1)(2n + 3) & = (4n^2-1)(2n+3)\\
+                                             & = 4n^2(2n+3) - (2n+3) \\
+                                             & = 8n^3 + 12n^2 - 2n -3
+                \end{split}
+            \end{equation*}
+
+            por tanto usaremos esta factorización para demostrar inductivamente nuestra proposición. \\
+            Decimos que los factores son de la forma $(2n+x)$ con $x\in\{-1,1,3\}$, nos referiremos a estos en las siguientes afirmaciones, basta con que alguno de estos factores sea múltiplo de 5 para que el resultado lo sea. Procedemos a demostrar ambas afirmaciones.
+            \begin{itemize}
+                \item Podemos dar por ciertos los casos base por los resultados del inciso anterior.
+                \item Suponemos que $n$ cumple que algún factor $(2n+x)$ es múltiplo de 5. Decimos que el siguiente número natural con las mismas unidades que $n$ es $n+10$. \\
+                Observamos que $2(n+10)+x=2n+20+x=(2n+x)+5(4)$, ya que ambos son múltiplos de 5 entonces el resultado es múltiplo de 5. Por tanto si $n$ cumple la proposición $n+10$ también.
+            \end{itemize}
+
+            Una vez demostradas ambas afirmaciones podemos usar el principio de inducción matemática para concluir que si las unidades de $n$ son $1,2,3,6,7,8$ entonces $8n^3 + 12n^2 - 2n -3$.
+
+        \end{enumerate}
+
+    \end{enumerate}            
 
 \end{document}
