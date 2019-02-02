@@ -57,10 +57,11 @@
 
     \begin{enumerate}
 
+        %Ejercicio 1%
         \item \begin{enumerate}
 
             \item Determinar los valores de $n$ para los cuales $8n^3 + 12n^2 - 2n - 3$ es múltiplo de 5.\\
-            \textbf{Solución: } Observamos los resultados de los números de $n\in [1,10]$ y en el siguiente renglón $n\in[1,10]$. \\
+            \textbf{Solución: } Observamos los resultados de los números de $n\in [1,10]$ y en el siguiente renglón $n\in[2,20]$. \\
             (1,15) (2,105) (3,315) (4,693) (5,1287) (6,2145) (7,3315) (8,4845) (9,6783) (10,9177) \\ 
             (11,12075) (12,15525) (13,19575) (14,24273) (15,29667) (16,35805) (17,42735) (18,50505) (19,59163) (20,68757) \\ 
             Basta con que el resultado tenga 5 o 0 en sus unidades para que sea múltiplo de 5. Podemos notar que si las unidades de $n$ son $1,2,3,6,7,8$ entonces el resultado es múltiplo de 5. Daremos esta proposición.
@@ -83,10 +84,47 @@
                 Observamos que $2(n+10)+x=2n+20+x=(2n+x)+5(4)$, ya que ambos son múltiplos de 5 entonces el resultado es múltiplo de 5. Por tanto si $n$ cumple la proposición $n+10$ también.
             \end{itemize}
 
-            Una vez demostradas ambas afirmaciones podemos usar el principio de inducción matemática para concluir que si las unidades de $n$ son $1,2,3,6,7,8$ entonces $8n^3 + 12n^2 - 2n -3$.
+            Una vez demostradas ambas afirmaciones podemos usar el principio de inducción matemática para concluir que si las unidades de $n$ son $1,2,3,6,7,8$ entonces $8n^3 + 12n^2 - 2n -3$ es múltiplo de 5.
 
         \end{enumerate}
-        \item 2
+
+        %Ejercicio 2%
+        \item \begin{enumerate}
+            
+            \item Determinar los valores de n para los cuales $2^n > n^2 + 4n + 5$.\\
+            \textbf{Solución: } Observamos los primeros 8 casos de n \\
+            (1,2,10) (2,4,17) (3,8,26) (4,16,37) (5,32,50) (6,64,65) (7,128,82) (8,256,101)\\
+            Determinamos que a partir de $n=7$ se cumple la desigualdad.
+
+            \item Demostrar su afirmación por Inducción.\\
+            \textbf{Solución: } Sea $n$ un número natural podemos decir que 
+            \begin{equation*}
+            \begin{split}
+                n > 0 &\Rightarrow n^2 > 0 \\
+                      &\Rightarrow n^2 + 4n > 2n \\
+                      &\Rightarrow n^2 + 4n +(4+1) > 2n + (4+1)  
+            \end{split}
+            \end{equation*} llamaremos (*) a esta afirmación.
+            Demostraremos las siguientes dos afirmaciones.\\
+            \begin{itemize}
+
+                \item Para $n=7$ se cumple la desigualdad como vimos en el inciso anterior.
+                \item Suponemos que se cumple para $n$. Partimos de 
+                \begin{equation*}
+                \begin{split}  
+                          2^n &> n^2 + 4n + 5 \text{ por hipótesis},\\
+                    2^n + 2^n &> (n^2 + 4n + 5) + (n^2 + 4n +5), \\
+                    2^n + 2^n &> (n^2 + 4n + 5) + 2n + (4+1) \text{ por (*)}, \\
+                        2(2^n)&> (n^2 + 2n + 1) + (4n + 4) + 5,\\
+                      2^{n+1} &> (n+1)^2 + 4(n+1) + 5 
+                \end{split}
+                \end{equation*}
+                Por tanto si $n$ cumple la desigualdad $n+1$ también la cumple.         
+            \end{itemize}
+
+            Demostradas ambas afirmaciones podemos usar el Principio de Inducción Matemática para concluir que si $n > 6$ entonces $2^n > n^2 + 4n+ 5$.
+
+        \end{enumerate}
 
     \end{enumerate}            
 
